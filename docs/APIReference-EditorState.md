@@ -95,6 +95,21 @@ The list below includes the most commonly used instance methods for `EditorState
       <pre>static forceSelection(editorState, selectionState): EditorState</pre>
     </a>
   </li>
+  <li>
+    <a href="#moveselectiontoend">
+      <pre>static moveSelectionToEnd(editorState): EditorState</pre>
+    </a>
+  </li>
+  <li>
+    <a href="#movefocustoend">
+      <pre>static moveFocusToEnd(editorState): EditorState</pre>
+    </a>
+  </li>
+  <li>
+    <a href="#setinlinestyleoverride">
+      <pre>static setInlineStyleOverride(inlineStyleOverride): EditorState</pre>
+    </a>
+  </li>
 </ul>
 
 *Properties*
@@ -121,7 +136,7 @@ The list below includes the most commonly used instance methods for `EditorState
     </a>
   </li>
   <li>
-    <a href="#directionMap">
+    <a href="#directionmap">
       <pre>directionMap</pre>
     </a>
   </li>
@@ -306,6 +321,33 @@ forcing the selection to be rendered.
 
 This is useful when the selection should be manually rendered in the correct
 location to maintain control of the rendered output.
+
+### moveSelectionToEnd
+
+```
+static moveSelectionToEnd(editorState: EditorState): EditorState
+```
+Returns a new `EditorState` object with the selection at the end.
+
+Moves selection to the end of the editor without forcing focus.
+
+### moveFocusToEnd
+
+```
+static moveFocusToEnd(editorState: EditorState): EditorState
+```
+Returns a new `EditorState` object with selection at the end and forces focus.
+
+This is useful in scenarios where we want to programmatically focus the input
+and it makes sense to allow the user to continue working seamlessly.
+
+### setInlineStyleOverride
+
+```
+static setInlineStyleOverride(inlineStyleOverride: DraftInlineStyle): EditorState
+```
+Returns a new `EditorState` object with the specified `DraftInlineStyle` applied
+as the set of inline styles to be applied to the next inserted characters.
 
 ## Properties and Getters
 

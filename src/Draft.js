@@ -11,6 +11,7 @@
 
 'use strict';
 
+const AtomicBlockUtils = require('AtomicBlockUtils');
 const BlockMapBuilder = require('BlockMapBuilder');
 const CharacterMetadata = require('CharacterMetadata');
 const CompositeDraftDecorator = require('CompositeDraftDecorator');
@@ -49,6 +50,7 @@ const DraftPublic = {
   ContentState,
   SelectionState,
 
+  AtomicBlockUtils,
   KeyBindingUtil,
   Modifier: DraftModifier,
   RichUtils: RichTextEditorUtil,

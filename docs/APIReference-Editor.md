@@ -3,7 +3,7 @@ id: api-reference-editor
 title: Editor Component
 layout: docs
 category: API Reference
-next: api-reference-editor-state
+next: api-reference-editor-change-type
 permalink: docs/api-reference-editor.html
 ---
 
@@ -163,6 +163,12 @@ convert that `ContentBlock` into an `unordered-list-item`.
 At Facebook, we also use this to convert typed ASCII quotes into "smart" quotes,
 and to convert typed emoticons into images.
 
+#### handlePastedText
+```
+handlePastedText?: (text: string, html?: string) => boolean
+```
+Handle text and html(for rich text) that has been pasted directly into the editor.
+
 #### handlePastedFiles
 ```
 handlePastedFiles?: (files: Array<Blob>) => boolean
@@ -205,3 +211,22 @@ onUpArrow?: (e: SyntheticKeyboardEvent) => void
 ```
 onDownArrow?: (e: SyntheticKeyboardEvent) => void
 ```
+
+
+## Methods
+
+#### focus
+
+```
+focus(): void
+```
+
+Force focus back onto the editor node.
+
+#### blur
+
+```
+blur(): void
+```
+
+Remove focus from the editor node.
